@@ -1,0 +1,4 @@
+TASK 10 – COMPARISON
+scale_test.py measures 300, 6,000 and 150,000 payments with time.perf_counter(). Float and Decimal totals may differ by tiny fractions because float is approximate; Decimal gives exact decimal arithmetic when built from strings. The timing depends on the computer and should be copied from the student's own run.
+Rounding each payment is appropriate when the bank pays each farmer to the nearest paisa per entry; the co-operative should confirm this policy. Rounding only the grand total can produce a different result.
+A dictionary can cache rate_per_litre for repeated (fat, snf) pairs. Lookup is average O(1), while calculating a rate is also O(1); caching saves repeated arithmetic but uses O(k) space for k unique pairs.

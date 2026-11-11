@@ -1,0 +1,3 @@
+TASK 5 – INPUT
+input() always returns str. Convert whole-number IDs only if they are numeric; use float() or Decimal() for measurements. "8,5" and "eight" are not valid Python decimal numeric strings; float() raises ValueError. Strip whitespace first, so " 8.5 " is accepted. try/except is clearer than checking every possible string format. Both approaches take O(1) time for a normal-length entry.
+Use f-strings such as f"{amount:8.2f}" to align rupee values to two decimal places.

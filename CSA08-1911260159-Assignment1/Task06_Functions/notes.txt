@@ -1,0 +1,3 @@
+TASK 6 – FUNCTIONS
+rate_per_litre(fat, snf) returns the price for one litre. payout(litres, fat, snf) returns one entry's amount. ten_day_total(entries) returns the total. Returning lets another part of the program reuse or test the value; printing only displays it. Function parameters and local variables exist inside the function. Constants can be read from the module, but functions should not change global rate values.
+A long script repeats logic and is harder to test. Lambda expressions are suitable for short expressions, not a multi-step payment system. Function calls add a small constant overhead, so total processing remains O(n).

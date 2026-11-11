@@ -1,0 +1,6 @@
+TASK 1 – PROBLEM ANALYSIS
+Inputs: farmer ID is text because it may contain letters; litres, fat and SNF are fractional measurements; shift is text (MORNING/EVENING). Outputs are rate per litre, payment for each entry and ten-day total.
+Constants: base rate Rs 30.00, standard fat 3.5%, standard SNF 8.5%, step size 0.1%, fat step Rs 0.40, SNF step Rs 0.30, allowed fat 2.0–7.0%.
+Rules: litres must be positive; fat must be within the allowed range; SNF must be a valid non-negative reading; shift must be one of the two collection shifts; money is rounded to two decimal places.
+Assumptions: the given rate rule is linear; each entry belongs to one farmer and one shift; ten-day total is the sum of rounded entry payments. A real deployment should confirm the permitted SNF range and official rounding policy with the co-operative.
+Alternative: separate variables such as litres1/fat1/snf1 become unmanageable for 300 farmers. A list of records uses O(n) time to process and O(n) space to retain entries, with the same structure for 300, 6,000 or 150,000 farmers. Separate variables also require O(n) storage but are difficult to loop over and maintain.

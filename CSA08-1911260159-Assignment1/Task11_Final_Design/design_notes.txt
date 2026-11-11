@@ -1,0 +1,11 @@
+FINAL DESIGN RECOMMENDATION
+
+1. Use Decimal for rupee calculations because the payment must be correct to the paisa.
+2. Convert input text with Decimal(str(value)); do not create Decimal from a float.
+3. Keep the rate values as named constants in milkrate.py so a revision is made in one place.
+4. Round the rate and each farmer payment to two decimal places using an explicit rounding rule.
+5. Validate positive litres, allowed fat range, valid SNF range, farmer ID and shift.
+6. Keep reusable calculations in a module and call them from the main program.
+7. For district scale, O(n) processing is suitable for 150,000 entries. A database should be added for permanent records, audit history, backup and reports.
+
+Limitations: the current example uses a simple local list and does not include login, a production database, analyser-device integration or a full audit trail.

@@ -1,0 +1,3 @@
+TASK 3 – CONSTANTS
+Use UPPER_CASE names for values intended to remain fixed during a run. Python does not enforce constants; uppercase is a programmer convention. Dynamic typing means a variable can first hold an int and later a str. Multiple assignment can assign several values, and a, b = b, a swaps them without a temporary variable.
+Magic numbers require edits in every expression where they appear. A rate-card dictionary groups values in one place; named constants are also clear and simple. Runtime and memory differences are negligible (O(1)) for this small rate card.

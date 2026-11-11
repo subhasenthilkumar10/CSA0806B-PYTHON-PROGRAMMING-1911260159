@@ -1,0 +1,5 @@
+TASK 12 – DESIGN CHALLENGE
+Impact: analyser readings now have two decimal places; April–June uses base Rs 32.00 and fat-step value Rs 0.45; SNF step remains Rs 0.30 as no new value was supplied; a farmer supplying more than 500 L in ten days receives Rs 0.50 per litre.
+Decision: MODIFY the existing module-based design. Constants remain grouped, but the rate card is selected by month and passed into the calculation. Decimal is used for analyser readings and money. Since two-decimal readings may be halfway between 0.1% steps, the example uses ROUND_HALF_UP to the nearest step; the co-operative must confirm this rule.
+The seasonal_milkrate.py file tests a non-season month and April. Its two sample entries total 550.5 L, so the bonus applies. The bonus is calculated as Rs 0.50 × total litres.
+Trade-off: the revised design is a little more complex but avoids duplicating the entire calculator. A production version should use an explicit season/date range and a configurable rate-card file.

@@ -1,0 +1,2 @@
+TASK 9 – TESTING
+The test_calculator.py file uses assert statements for standard values, above/below values, lowest/highest fat and invalid quantity/fat/shift. Automated tests can be rerun with one command after every change. Manual testing requires retyping each case and is slower and easier to do inconsistently. The five-entry sample program prints the expected payments for checking.

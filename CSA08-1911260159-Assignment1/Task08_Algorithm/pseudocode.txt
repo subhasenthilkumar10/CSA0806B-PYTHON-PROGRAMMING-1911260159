@@ -1,0 +1,22 @@
+TASK 8 – PSEUDOCODE (SIMATS-style simple sequence)
+BEGIN
+  SET total = 0.00
+  FOR each entry
+    READ farmer_id, litres, fat, snf, shift
+    IF farmer_id is empty OR litres <= 0 OR fat outside 2.0..7.0 OR shift invalid
+      DISPLAY error
+      CONTINUE
+    END IF
+    fat_steps = ROUND((fat - 3.5) / 0.1)
+    snf_steps = ROUND((snf - 8.5) / 0.1)
+    rate = ROUND(30.00 + fat_steps * 0.40 + snf_steps * 0.30, 2)
+    amount = ROUND(litres * rate, 2)
+    total = total + amount
+    DISPLAY rate and amount
+  END FOR
+  DISPLAY total
+END
+
+Flowchart in words: Start → Read entry → Validate? → No: show error and read next → Yes: calculate steps → calculate rate → calculate amount → add to total → more entries? → Yes: repeat → No: print total → Stop.
+Hand trace: 10 L at standard values = Rs 300.00; 8.5 L at 4.2/8.7 = rate Rs 33.40, pay Rs 283.90; 12 L at 3.1/8.3 = rate Rs 27.80, pay Rs 333.60. Total = Rs 917.50.
+List storage uses O(n) space; running total uses O(1) extra space. Both take O(n) time. Keep entries if audit, correction, or reports are required.

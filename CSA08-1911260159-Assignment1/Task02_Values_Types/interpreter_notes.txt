@@ -1,0 +1,24 @@
+TASK 2 – INTERPRETER EVIDENCE
+>>> type(10)                 # int
+<class 'int'>
+>>> type(10.0)               # float
+<class 'float'>
+>>> type("10")               # str
+<class 'str'>
+>>> type(True)               # bool
+<class 'bool'>
+>>> type([10, 8.5])          # list
+<class 'list'>
+>>> 7 / 2
+3.5
+>>> 7 // 2
+3
+>>> 7 % 2
+1
+>>> -7 // 2
+-4
+>>> 0.1 + 0.2 == 0.3
+False
+
+Float stores binary approximations, so 0.1 + 0.2 is not exactly 0.3. Decimal strings and integer paise avoid this issue for money. Decimal(float("0.1")) carries the float's approximation into Decimal; Decimal("0.1") stores the intended decimal exactly.
+The provided complete_decimal.py demonstrates float, Decimal and integer-paise totals. Expected float output is approximately 33400.30000000061 and Decimal output is 33400.30.

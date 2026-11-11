@@ -1,0 +1,3 @@
+TASK 11 – FINAL DESIGN
+Retain the modular design, but use Decimal for money, named constants, validation, and reusable functions. A rate revision changes one rate card in milkrate.py. The current sample is suitable for a single-process demonstration; production use needs a database, audit log, backup, access control and analyser integration. At 150,000 records, the processing loop is O(n), but records should be stored in a database rather than only in memory.
+A JSON rate card could be loaded at program start. Reading t values takes O(t) time and O(t) space. It makes seasonal revisions easier without editing Python code, but the file must be validated, versioned and protected.

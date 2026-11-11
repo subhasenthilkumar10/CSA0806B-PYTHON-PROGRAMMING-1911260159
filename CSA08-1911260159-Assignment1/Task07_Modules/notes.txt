@@ -1,0 +1,2 @@
+TASK 7 – MODULES
+import milkrate uses the module name; from milkrate import payout imports one named function; import milkrate as mr uses an alias. The if __name__ == "__main__": block runs only when the file is started directly. On import, __name__ is "milkrate", so the sample table is not printed. Python searches the current folder and folders in sys.path. Imported modules are cached in sys.modules.
