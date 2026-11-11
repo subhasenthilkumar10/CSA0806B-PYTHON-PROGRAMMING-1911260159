@@ -1,0 +1,4 @@
+B4.1 The program compares 50 sample labels with the supplied human_label values and reports agreement. These are practice labels; real deployment requires representative human-labelled complaints. Inspect sentiment_results.csv and misclassifications.
+B4.2 Index experiment measures 80 queries before/after index (station,day); actual times vary by device.
+B4.3 Store clean observations in SQLite with indexes and unique station/time keys; retain raw CSV for audit. Clean at ingestion, log rejects, use SQL aggregates and Python charts. At 50,000 complaints/month, lexicon is a quick baseline but evaluate a trained model on local labelled data before adoption.
+Alternative summariser: first k sentences is fast after splitting but may miss important content. Frequency ranking scans words and sentences, expected O(words) time and O(vocabulary + sentences) space; judge summary relevance on the complaint set.

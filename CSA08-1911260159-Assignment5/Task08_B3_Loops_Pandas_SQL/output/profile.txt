@@ -1,0 +1,18 @@
+         96476 function calls in 0.040 seconds
+
+   Ordered by: cumulative time
+   List reduced from 54 to 10 due to restriction <10>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.005    0.005    0.021    0.021 /mnt/data/CSA08-1911260159-Assignment5/Task08_B3_Loops_Pandas_SQL/benchmark.py:15(python_group)
+        1    0.006    0.006    0.019    0.019 /mnt/data/CSA08-1911260159-Assignment5/Task08_B3_Loops_Pandas_SQL/benchmark.py:6(generate)
+     8761    0.009    0.000    0.015    0.000 /usr/lib/python3.13/csv.py:174(__next__)
+     8761    0.006    0.000    0.006    0.000 {method 'writerow' of '_csv.writer' objects}
+     8760    0.004    0.000    0.004    0.000 {built-in method builtins.round}
+     8762    0.003    0.000    0.003    0.000 {built-in method builtins.next}
+     8760    0.002    0.000    0.003    0.000 /usr/lib/python3.13/random.py:498(uniform)
+    17521    0.002    0.000    0.002    0.000 /usr/lib/python3.13/csv.py:160(fieldnames)
+     8760    0.001    0.000    0.001    0.000 {method 'get' of 'dict' objects}
+    17522    0.001    0.000    0.001    0.000 {built-in method builtins.len}
+
+

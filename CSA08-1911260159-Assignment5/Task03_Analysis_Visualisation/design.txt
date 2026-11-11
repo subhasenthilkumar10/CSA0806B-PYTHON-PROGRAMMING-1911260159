@@ -1,0 +1,2 @@
+A3.1 Monthly PM2.5 trend: line chart (ordered time). Station comparison: bar chart (categories). Temperature versus PM2.5: scatter plot (two numeric variables). Worst hours: bar chart of mean by hour; histogram shows distribution, box plot shows spread/outliers.
+A3.2 Daily summary: station,date,min,max,mean,count; produce with SQL GROUP BY station,date and MIN/MAX/AVG/COUNT. Python running sum/count/min/max also takes O(n) time and O(number of station-days) memory; SQL GROUP BY scans rows in O(n) and manages grouping internally.

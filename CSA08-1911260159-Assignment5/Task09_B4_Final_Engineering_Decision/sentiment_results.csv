@@ -1,0 +1,51 @@
+id,text,actual,predicted
+1,Roads are clean and buses are fast,positive,positive
+2,Smoke makes the air bad,negative,negative
+3,The response team was helpful,positive,positive
+4,Factory smoke is dirty,negative,negative
+5,The bus is slow but roads are clean,neutral,neutral
+6,Air quality improved near park,positive,positive
+7,There is smoke near my street,negative,negative
+8,The station display is broken,negative,negative
+9,The new service is good,positive,positive
+10,The air is not clean today,negative,negative
+11,The staff were not helpful,negative,negative
+12,The road is clean but bus is slow,neutral,neutral
+13,The air is bad and dirty,negative,negative
+14,The new filter improved area,positive,positive
+15,No smoke was seen today,positive,positive
+16,The app is fast and helpful,positive,positive
+17,The air smells bad near school,negative,negative
+18,The repair team was slow,negative,negative
+19,The reading looks good,positive,positive
+20,The road is not bad,positive,positive
+21,Clean parks are helpful,positive,positive
+22,Smoke and dust everywhere,negative,negative
+23,The bus service improved,positive,positive
+24,The sensor is broken again,negative,negative
+25,The new road is good but traffic is slow,neutral,neutral
+26,Air is clean near lake,positive,positive
+27,The response was rude,negative,negative
+28,The pollution level is high,neutral,neutral
+29,The street is dirty,negative,negative
+30,The new bus is fast,positive,positive
+31,"Not good, smoke is still here",negative,negative
+32,The team was helpful but app is slow,neutral,neutral
+33,The air is never clean here,negative,negative
+34,No bad smell today,positive,positive
+35,The report is useful,neutral,neutral
+36,The station is working,neutral,neutral
+37,The factory smoke is bad,negative,negative
+38,The clean-up improved road,positive,positive
+39,The service is not slow,positive,positive
+40,The display is not broken,positive,positive
+41,The air is dirty near market,negative,negative
+42,The bus is good but road is bad,neutral,neutral
+43,The response was fast,positive,positive
+44,There is no smoke near park,positive,positive
+45,The sensor reading is not good,negative,negative
+46,Street cleaning was helpful,positive,positive
+47,Air is bad but staff are helpful,neutral,neutral
+48,Complaint system is slow,negative,negative
+49,The new filter is good,positive,positive
+50,The air is clean today,positive,positive

@@ -1,0 +1,51 @@
+id,text,human_label
+1,"Roads are clean and buses are fast",positive
+2,"Smoke makes the air bad",negative
+3,"The response team was helpful",positive
+4,"Factory smoke is dirty",negative
+5,"The bus is slow but roads are clean",neutral
+6,"Air quality improved near park",positive
+7,"There is smoke near my street",negative
+8,"The station display is broken",negative
+9,"The new service is good",positive
+10,"The air is not clean today",negative
+11,"The staff were not helpful",negative
+12,"The road is clean but bus is slow",neutral
+13,"The air is bad and dirty",negative
+14,"The new filter improved area",positive
+15,"No smoke was seen today",positive
+16,"The app is fast and helpful",positive
+17,"The air smells bad near school",negative
+18,"The repair team was slow",negative
+19,"The reading looks good",positive
+20,"The road is not bad",positive
+21,"Clean parks are helpful",positive
+22,"Smoke and dust everywhere",negative
+23,"The bus service improved",positive
+24,"The sensor is broken again",negative
+25,"The new road is good but traffic is slow",neutral
+26,"Air is clean near lake",positive
+27,"The response was rude",negative
+28,"The pollution level is high",neutral
+29,"The street is dirty",negative
+30,"The new bus is fast",positive
+31,"Not good, smoke is still here",negative
+32,"The team was helpful but app is slow",neutral
+33,"The air is never clean here",negative
+34,"No bad smell today",positive
+35,"The report is useful",neutral
+36,"The station is working",neutral
+37,"The factory smoke is bad",negative
+38,"The clean-up improved road",positive
+39,"The service is not slow",positive
+40,"The display is not broken",positive
+41,"The air is dirty near market",negative
+42,"The bus is good but road is bad",neutral
+43,"The response was fast",positive
+44,"There is no smoke near park",positive
+45,"The sensor reading is not good",negative
+46,"Street cleaning was helpful",positive
+47,"Air is bad but staff are helpful",neutral
+48,"Complaint system is slow",negative
+49,"The new filter is good",positive
+50,"The air is clean today",positive

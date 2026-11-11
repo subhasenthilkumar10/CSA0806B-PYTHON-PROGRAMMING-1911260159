@@ -1,0 +1,2 @@
+A4.1 Use print on tiny samples, assert valid ranges/date format, logging.info for progress, warning for rejected rows, exception for unexpected errors. Use pdb.set_trace() or IDE breakpoints before conversion to inspect variables.
+A4.2 time.perf_counter() measures whole steps, timeit repeats small alternatives, cProfile identifies cumulative function time. Print calls can slow large runs and are hard to switch off; logging levels can be raised to WARNING/ERROR and debugger detached.
