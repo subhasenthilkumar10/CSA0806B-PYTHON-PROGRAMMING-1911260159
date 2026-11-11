@@ -1,0 +1,8 @@
+MESS BILL REPORT
+Subha - Rs.1250.50
+Arun - Rs.980.00
+Meena - Rs.1125.75
+Kavin - Rs.850.00
+Total: Rs.4206.25
+\nRejected lines:
+(4, 'bad,line', 'expected register number, name and amount')

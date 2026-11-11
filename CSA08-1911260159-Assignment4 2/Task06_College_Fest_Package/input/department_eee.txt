@@ -1,0 +1,3 @@
+192322001,Charan,EEE,charan@example.com,Quiz;Drama
+192322002,Divya,EEE,divyaexample.com,Dance
+broken,line,with,too,few

@@ -1,0 +1,48 @@
+Stage 1 – Inputs, outputs and testable rules
+Inputs: five department text files. Each row has register number, name, department, email and semicolon-separated events.
+Outputs: master_list.csv, one participant file per event, summary_report.txt and error_log.txt.
+Rules: accept rows with exactly five fields; required fields cannot be blank; email must contain @ and a dot after @; event names are split on semicolons; first registration for a register number is kept; duplicates, invalid rows and file errors are logged; a bad row or missing file must not stop other files.
+
+Stage 2 – Flow
+Department files -> open each file -> read line by line -> validate fields/email/events -> valid row? -> yes: collect registration; no: error log -> remove duplicates using a set -> create event-wise groups -> write master list, participant files and summary -> save error log.
+
+Stage 3 – Critical decisions
+Use a set of register numbers already seen for duplicate detection. The email check uses string methods: "@" in email, email.startswith("@") and "." in the part after "@". The reader handles file-level exceptions; the validator raises InvalidRegistration for row-level errors; main continues after every department file.
+
+Stage 4 – Package
+fest/
+  __init__.py
+  validator.py: validate_line()
+  reader.py: read_department_files()
+  processor.py: remove_duplicates(), make_event_lists()
+  writer.py: write_outputs()
+main.py coordinates the work.
+
+Pseudocode
+START
+  registrations = empty list; errors = empty list
+  FOR each department file
+    TRY open file
+      FOR each line and line number
+        TRY validate the line
+          add valid registration
+        CATCH InvalidRegistration
+          add row details to errors
+      END FOR
+    CATCH missing/permission/encoding error
+      add file error to errors
+  END FOR
+  seen = empty set; clean = empty list
+  FOR each valid registration
+    IF register number is in seen, log duplicate
+    ELSE add number to seen and row to clean
+  END FOR
+  group clean registrations by event
+  write master list, event files, summary and error log
+STOP
+
+Stage 5 – Demonstration
+The supplied CSE file contains a duplicate registration. The EEE file contains an invalid email and a damaged row. The MECH file is intentionally missing. Run main.py and inspect output/error_log.txt. The valid registrations still produce reports.
+
+Alternative:
+Searching a list of all previous register numbers for every row can take O(n²) time. A set gives O(1) average membership/insertion, so processing n registrations takes O(n) average time. Both approaches store up to O(n) register numbers; the set uses additional hash-table overhead.

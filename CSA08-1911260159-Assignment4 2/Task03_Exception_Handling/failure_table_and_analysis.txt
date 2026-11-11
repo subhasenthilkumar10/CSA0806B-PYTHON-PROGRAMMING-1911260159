@@ -1,0 +1,22 @@
+Task 3.1 – Failure table
+Missing folder/file -> FileNotFoundError
+Permission denied -> PermissionError
+Invalid UTF-8 bytes -> UnicodeDecodeError
+Wrong number of comma-separated fields -> custom InvalidRecord
+Invalid status such as L -> custom InvalidRecord
+Accessing a missing list item -> IndexError
+Converting non-numeric text to a number -> ValueError
+Empty file -> no exception by itself; counts remain zero (handle as a valid empty input or report it as a warning).
+A directory supplied instead of a file may raise IsADirectoryError.
+
+Task 3.2
+InvalidRecord is raised inside parse_line(), where the format is known. It is caught inside summarise() so one damaged row does not stop the remaining file.
+
+Task 3.3
+The completed program uses try/except for file and record errors, else after a successful file read, finally for a completion message, and raise ... from ... to preserve the original exception as the cause.
+
+Task 3.4 – Misuse experiment
+If except Exception: pass is used and a variable is misspelled, such as presnt += 1, Python raises NameError. The broad handler catches it and pass hides it. The program may then show an incorrect count without explaining the problem.
+
+Alternative concept:
+With exception-based validation, valid rows follow the normal path and an exception is created only for a bad row. This is convenient when bad rows are rare. With if checks, each row is checked before use. Both are O(1) work per row and O(n) for n rows overall. If bad rows are common, repeated exception creation and traceback handling can add overhead, so if checks are usually clearer and faster. Both use O(1) extra space per row, plus stored errors.

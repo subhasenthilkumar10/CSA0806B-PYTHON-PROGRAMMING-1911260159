@@ -1,0 +1,17 @@
+Task 5.1 – Four structures
+(a) One script: all functions and the main block are in one_script.py.
+(b) One module + main: attendance_utils.py contains reusable functions; main.py runs them.
+(c) Three modules: reader.py, stats.py and report.py separate the responsibilities.
+(d) Package: attendance/__init__.py plus reader.py, stats.py and report.py; main.py imports the package modules.
+
+Task 5.2 – Change request
+The second report is absent_three_days(), which checks three consecutive calendar dates. In (a), one file changes. In (b), attendance_utils.py changes (one file). In (c), stats.py changes (one file). In (d), attendance/stats.py changes (one file). The main scripts call the new function and print its result; those calls are already included in this demonstration.
+
+Task 5.3 – Comparison
+One script is easiest for a tiny program but becomes crowded. One module allows reuse and keeps the main script short. Three modules separate responsibilities and are easier to test. A package gives a clear namespace and scales better; it also reduces naming conflicts with unrelated modules.
+import attendance.stats gives the module object; call attendance.stats.percentage(...).
+from attendance import stats imports the stats submodule and call stats.percentage(...).
+from attendance.stats import percentage imports the function directly and call percentage(...).
+
+Alternative:
+Keeping all functions in one script avoids package organisation but makes larger changes harder to locate. Package import has a one-time loading cost; Python caches loaded modules in sys.modules, so later imports reuse them. Memory is O(total imported module code/data), usually small compared with the input data. Finding a function is quickest in a small script; in a package, the function is easier to locate by its responsibility.

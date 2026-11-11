@@ -1,0 +1,4 @@
+department_eee.txt,2,192322002,Divya,EEE,divyaexample.com,Dance,invalid email 'divyaexample.com'
+department_eee.txt,3,broken,line,with,too,few,invalid email 'too'
+department_mech.txt,0,FILE ERROR,[Errno 2] No such file or directory: '/mnt/data/CSA08-1911260159-Assignment4/Task06_College_Fest_Package/input/department_mech.txt'
+DUPLICATE,192311001,duplicate registration ignored

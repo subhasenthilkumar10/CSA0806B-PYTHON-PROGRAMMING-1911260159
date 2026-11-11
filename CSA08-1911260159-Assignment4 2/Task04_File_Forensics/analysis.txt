@@ -1,0 +1,15 @@
+Task 4.1
+Opening returns.log in w mode truncates the old content every day, so only the final day's books remain. write(b) does not add a newline, so entries run together. If write() fails, close() is skipped because there is no finally block; the file may remain open until cleanup.
+
+Task 4.2
+bug_demo.py processes day1, day2 and day3. Its final log contains only the last day's data and the strings are joined without line separators.
+
+Task 4.3
+fixed_returns.py uses append mode, with statements, newline characters and a separate errors.log. It also records a missing input file and continues to the next day.
+
+Task 4.4
+1. Use with open(...) so files close automatically, even when an exception occurs.
+2. Choose the correct mode and write record separators such as newline characters.
+
+Alternative:
+Manual version: open files inside try, then close each non-None file handle inside finally. Complexity remains O(n) time and O(1) extra processing space; with does not change Big-O. In the with version, files are closed automatically. In a correctly written try/finally version, files are also closed. In the faulty original, a write error can leave the log handle open.

@@ -1,0 +1,4 @@
+Valid unique registrations: 3
+Events created: ['Dance', 'Drama', 'Music', 'Quiz']
+Errors recorded: 4
+Check the output folder for all reports.

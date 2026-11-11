@@ -1,0 +1,16 @@
+Task 1.1 – Deficiencies and office impact
+1. Hard-coded path: the program fails on another computer or when the file is moved.
+2. File is not closed: resources may remain occupied, especially if an error occurs.
+3. f.read() loads the complete file: memory use grows with file size.
+4. Bare except with pass hides every error and silently loses records.
+5. int() rejects paise values such as 1250.50; valid bills are skipped.
+6. Repeated report = report + ... creates many new strings and is inefficient.
+7. A final blank line can cause an indexing error; it should be skipped deliberately.
+8. Rejected lines are not recorded, so the office cannot correct missing bills.
+9. The code assumes exactly three fields without checking the field count.
+
+Task 1.3 – Design defence (under 100 words)
+The repaired version opens the file with a with statement, so it closes automatically. It processes one line at a time, checks the number of fields and converts the amount to float so paise are accepted. Specific ValueError handling records rejected rows instead of hiding them. A list stores report lines efficiently. For 50,000 lines, processing one line at a time keeps working memory close to O(one line), apart from the report and rejected-line lists.
+
+Alternative:
+Both approaches take O(n) time for n characters/lines. read() or readlines() keeps the whole file in memory, O(file size). Iterating over the file uses O(one line) input memory. The repaired example additionally stores report/rejected results, so those lists use memory proportional to the output records.

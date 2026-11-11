@@ -1,0 +1,42 @@
+Task 2.1 – Data model
+Input: one UTF-8 text file per day; each non-empty line is register_number,date,status (P or A).
+Dictionary: counts[register_number] = [present_count, absent_count].
+Output 1: monthly_summary.csv with register number, present, absent and percentage.
+Output 2: below_75_percent.csv with register number and percentage.
+Damaged-line log: damaged_lines.log stores file name, line number, original line and reason.
+
+Task 2.2 – File operations
+Use pathlib.Path.glob("*.txt") to list daily files. Open input in r mode with UTF-8 and iterate line by line. Open/write output in w mode because each monthly report is regenerated. Use write()/write_text() for reports. Append mode a would be suitable for a permanent running log, but this monthly run creates a fresh log.
+
+Task 2.3 – Pseudocode
+START
+  create empty dictionary counts and empty error list
+  FOR each daily file found in the month folder
+    open file in read mode using UTF-8
+    FOR each line with its line number
+      split line by comma
+      IF field count is not 3 OR status is not P/A
+        add file name, line number and reason to error list
+      ELSE
+        create [0, 0] for register number if not present
+        increase present or absent count
+      END IF
+    END FOR
+  END FOR
+  FOR each register number in counts
+    calculate percentage = present / (present + absent) * 100
+    add row to summary
+    IF percentage < 75, add row to low-attendance report
+  END FOR
+  write both reports and damaged-line log
+STOP
+
+Task 2.4 – Trace
+day1.txt:
+192311001,2026-10-08,P -> counts[192311001] becomes [1,0]
+192311002,2026-10-08,A -> counts[192311002] becomes [0,1]
+192311003,2026-10-08,P -> counts[192311003] becomes [1,0]
+damaged,line -> two fields, so it is written to damaged_lines.log with line number 4.
+
+Alternative:
+Re-reading all f files for each of s students and l lines per file takes O(s*f*l). Reading every line once and updating a dictionary takes O(f*l) average time. The dictionary uses O(s) space; the repeated scan can use O(1) extra counting space per student, excluding outputs.

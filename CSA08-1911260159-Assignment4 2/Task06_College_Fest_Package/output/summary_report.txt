@@ -1,0 +1,6 @@
+Total valid unique registrations: 3
+Events: 4
+Dance: 1 participant(s)
+Drama: 1 participant(s)
+Music: 2 participant(s)
+Quiz: 2 participant(s)

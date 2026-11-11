@@ -1,0 +1,8 @@
+MONTHLY SUMMARY
+Register Number,Present,Absent,Percentage
+192311001,2,0,100.00
+192311002,1,1,50.00
+192311003,1,1,50.00
+
+Below 75%: ['192311002,50.00', '192311003,50.00']
+Damaged lines: 1
