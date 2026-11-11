@@ -1,0 +1,19 @@
+Q7 Contact merging
+9840012345 {'names': {'Dr. Ravi', 'ravi kumar'}, 'numbers': {'9840012345'}, 'emails': {'ravi.work@example.com', 'ravi@example.com'}}
+9876543210 {'names': {'Meena'}, 'numbers': {'9876543210'}, 'emails': {'meena@example.com'}}
+name:karthik {'names': {'Karthik'}, 'numbers': set(), 'emails': {'karthik@example.com'}}
+n=1000: dictionary=0.00481s groups=1000
+n=100000: dictionary=0.53165s groups=100000
+Small pairwise duplicate pairs: 2
+
+ERROR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
